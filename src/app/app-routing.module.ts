@@ -4,6 +4,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import { CryptoChipListComponent } from './components/crypto-chip-list/crypto-chip-list.component';
 import { PublicHolidayListComponent } from './components/public-holiday-list/public-holiday-list.component';
+import { CheckboxCategoryListComponent } from './components/checkbox-category-list/checkbox-category-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -12,9 +13,10 @@ import { CryptoChipListComponentModule } from './components/crypto-chip-list/cry
 import { CryptoChipsServiceModule } from './services/crypto-chips.service-module';
 import { PublicHolidayListComponentModule } from './components/public-holiday-list/public-holiday-list.component-module';
 import { PublicHolidaysServiceModule } from './services/public-holidays.service-module';
+import { CheckboxCategoryListComponentModule } from './components/checkbox-category-list/checkbox-category-list.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'crypto', component: CryptoChipListComponent }, { path: 'public-holidays', component: PublicHolidayListComponent }]), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoChipListComponentModule, CryptoChipsServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule],
+  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'crypto', component: CryptoChipListComponent }, { path: 'public-holidays', component: PublicHolidayListComponent }, { path: 'checkbox-categories', component: CheckboxCategoryListComponent }]), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoChipListComponentModule, CryptoChipsServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CheckboxCategoryListComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
