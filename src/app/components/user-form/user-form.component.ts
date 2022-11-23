@@ -14,14 +14,20 @@ export class UserFormComponent {
     email: new FormControl(),
     username: new FormControl(),
     password: new FormControl(),
-    firstname: new FormControl(),
-    lastname: new FormControl(),
-    city: new FormControl(),
-    street: new FormControl(),
-    number: new FormControl(),
-    zipcode: new FormControl(),
-    lat: new FormControl(),
-    long: new FormControl(),
+    name: new FormGroup({
+      firstname: new FormControl(),
+      lastname: new FormControl(),
+    }),
+    address: new FormGroup({
+      city: new FormControl(),
+      street: new FormControl(),
+      number: new FormControl(),
+      zipcode: new FormControl(),
+      geolocation: new FormGroup({
+        lat: new FormControl(),
+        long: new FormControl(),
+      }),
+    }),
     phone: new FormControl(),
   });
 
