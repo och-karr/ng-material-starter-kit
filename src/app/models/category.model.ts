@@ -1,2 +1,1 @@
-export interface CategoryModel {
-}
+export type CategoryModel = string;
