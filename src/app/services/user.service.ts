@@ -11,4 +11,8 @@ export class UserService {
   create(user: Omit<UserModel, 'id'>): Observable<UserModel> {
     return this._httpClient.post<UserModel>('https://fakestoreapi.com/users', user);
   }
+
+  getOne(id: number): Observable<UserModel> {
+    return this._httpClient.get<UserModel>(`https://fakestoreapi.com/users/${id}`);
+  }
 }
