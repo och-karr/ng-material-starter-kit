@@ -16,6 +16,7 @@ import {AgePredictionComponent} from './components/age-prediction/age-prediction
 import {ProductDetailsComponent} from './components/product-details/product-details.component';
 import {UserDetailsComponent} from './components/user-details/user-details.component';
 import {CardDetailsComponent} from './components/card-details/card-details.component';
+import {DogPictureComponent} from './components/dog-picture/dog-picture.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {CategoryListComponentModule} from './components/category-list/category-list.component-module';
@@ -47,6 +48,8 @@ import {ProductDetailsComponentModule} from './components/product-details/produc
 import {UserDetailsComponentModule} from './components/user-details/user-details.component-module';
 import {CardDetailsComponentModule} from './components/card-details/card-details.component-module';
 import {CardServiceModule} from './services/card.service-module';
+import {DogPictureComponentModule} from './components/dog-picture/dog-picture.component-module';
+import {DogPictureServiceModule} from './services/dog-picture.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([{path: 'products', component: ProductListComponent}, {
@@ -73,7 +76,10 @@ import {CardServiceModule} from './services/card.service-module';
   }, {path: 'user/:id', component: UserDetailsComponent}, {
     path: 'cart/:id',
     component: CardDetailsComponent
-  }]), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoChipListComponentModule, CryptoChipsServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CheckboxCategoryListComponentModule, CategoriesMenuListComponentModule, ProductFormComponentModule, ProductServiceModule, EmployeeFormComponentModule, EmployeeServiceModule, UserLoginFormComponentModule, UserLoginServiceModule, UserFormComponentModule, UserServiceModule, ProductTableComponentModule, CatFactComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, ProductDetailsComponentModule, UserDetailsComponentModule, CardDetailsComponentModule, CardServiceModule],
+  }, {
+    path: ':breed',
+    component: DogPictureComponent
+  }]), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoChipListComponentModule, CryptoChipsServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CheckboxCategoryListComponentModule, CategoriesMenuListComponentModule, ProductFormComponentModule, ProductServiceModule, EmployeeFormComponentModule, EmployeeServiceModule, UserLoginFormComponentModule, UserLoginServiceModule, UserFormComponentModule, UserServiceModule, ProductTableComponentModule, CatFactComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, ProductDetailsComponentModule, UserDetailsComponentModule, CardDetailsComponentModule, CardServiceModule, DogPictureComponentModule, DogPictureServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

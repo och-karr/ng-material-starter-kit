@@ -104,6 +104,10 @@
     "user-template": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>{{ $itemVariable$ }} {{ $itemVariable$ }}</h1>\n <p>{{ $itemVariable$ }}</p>"
+    },
+    "image-template": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<img mat-card-image [src]='$itemVariable$'>"
     }
   }
 }
